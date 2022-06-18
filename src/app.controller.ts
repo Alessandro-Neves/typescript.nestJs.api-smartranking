@@ -1,12 +1,21 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+
+interface IPing {
+  message: string,
+  date: Date
+}
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  // constructor() {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getHello(): IPing {
+    const ping = {
+      message: 'API is running!',
+      date: new Date()
+    }
+
+    return ping;
   }
 }
