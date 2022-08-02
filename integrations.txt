@@ -1,0 +1,3 @@
+[Integrar mongo db]
+    yarn add @nestjs/mongoose mongoose
+    yarn add -D @types/mongoose
